@@ -1,0 +1,35 @@
+{
+  "name": "basic-proxy-setup",
+  "version": "1.0.0",
+  "description": "A collection of HTTPS proxy servers with different URL rewriting capabilities",
+  "main": "basic-logging-proxy.js",
+  "scripts": {
+    "start": "node basic-logging-proxy.js",
+    "start:logging": "node basic-logging-proxy.js",
+    "start:links": "node link-rewriting-proxy.js",
+    "start:comprehensive": "node comprehensive-rewriting-proxy.js",
+    "dev:logging": "nodemon basic-logging-proxy.js",
+    "dev:links": "nodemon link-rewriting-proxy.js",
+    "dev:comprehensive": "nodemon comprehensive-rewriting-proxy.js",
+    "setup-ssl": "mkdir -p ssl && echo 'Please add your SSL certificates (privkey.pem and fullchain.pem) to the ssl/ directory'"
+  },
+  "keywords": [
+    "proxy",
+    "https",
+    "url-rewriting",
+    "express",
+    "ssl"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "http-proxy-middleware": "^2.0.9"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
